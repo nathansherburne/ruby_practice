@@ -87,11 +87,11 @@ def get_options
     OptionParser.new do |opts|
         opts.banner = "Usage: stock_picker.rb [arguments]"
 
-        opts.on("-i INITIAL-VALUE", "--initial-value=INITIAL-VALUE", Integer, "The initial price of the hypothetical stock") do |initial_value|
+        opts.on("-i INITIAL-VALUE", "--initial-value=INITIAL-VALUE", Integer, "The initial integer price of the hypothetical stock") do |initial_value|
             options[:initial_value] = initial_value
         end
 
-        opts.on("-n NUM-DAYS", "--num-days=NUM-DAYS", Integer, "Number of days to simulate") do |num_days|
+        opts.on("-n NUM-DAYS", "--num-days=NUM-DAYS", Integer, "Integer number of days to simulate") do |num_days|
             options[:num_days] = num_days
         end
 
