@@ -87,7 +87,7 @@ def get_options
     OptionParser.new do |opts|
         opts.banner = "Usage: stock_picker.rb [arguments]"
 
-        opts.on("-i INITIAL_VALUE", "--initial-value=INITIAL_VALUE", Integer, "The initial price of the hypothetical stock") do |initial_value|
+        opts.on("-i INITIAL-VALUE", "--initial-value=INITIAL-VALUE", Integer, "The initial price of the hypothetical stock") do |initial_value|
             options[:initial_value] = initial_value
         end
 
