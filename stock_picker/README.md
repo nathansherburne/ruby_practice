@@ -7,4 +7,7 @@ Usage: stock_picker.rb [arguments]
         --initial-value
     -n, --num-days=NUM-DAYS          Integer number of days to simulate
     -h, --help                       Display this help message
+
+Example:
+    $ ruby stock_picker.rb -i 100 -n 150
 ```
