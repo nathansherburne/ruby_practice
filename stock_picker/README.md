@@ -10,6 +10,8 @@ Finding Optimal Solution
 ------------------------
 Dynamic programming is used to reduce this problem from O(n^2) to O(n).
 
+Usage
+------------------------
 
 ```
 Usage: stock_picker.rb [arguments]
@@ -18,6 +20,22 @@ Usage: stock_picker.rb [arguments]
     -n, --num-days=NUM-DAYS          Integer number of days to simulate
     -h, --help                       Display this help message
 
-Example:
-    $ ruby stock_picker.rb -i 100 -n 150
+```
+
+Example
+------------------------
+```
+$ ruby stock_picker.rb -i 100 -n 25
+
+Stock prices over 25 days:
+Day 0 : 100, 101, 100, 101, 100
+Day 5 : 97, 98, 123, 124, 123
+Day 10 : 124, 123, 121, 122, 123
+Day 15 : 127, 128, 127, 128, 129
+Day 20 : 127, 139, 140, 142, 141
+Buy Day: 5, at 97
+Sell Day: 23, at 142
+Gain: 45
+Min price: 97 on day 5
+Max price: 142 on day 23
 ```
