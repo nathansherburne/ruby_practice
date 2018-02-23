@@ -8,7 +8,7 @@ To generate a list of stock prices, completely random numbers would not be reali
 
 Finding Optimal Solution
 ------------------------
-Dynamic programming is used to reduce this problem from O(n^2^) to O(n).
+Dynamic programming is used to reduce this problem from O(n<sup>2</sup>) to O(n).
 
 Usage
 ------------------------
