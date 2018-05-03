@@ -66,12 +66,8 @@ module Enumerable
     end
 
     def my_inject(memo=nil)
-        i = 0
-        if memo == nil
-            memo = self[0]
-            i += 1
-        end
-        self[i..-1].my_each { |el| memo = yield(memo, el) } 
+        memo, *s = self if memo == nil
+        s.my_each { |el| memo = yield(memo, el) } 
         memo
     end
 end
