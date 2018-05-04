@@ -18,6 +18,10 @@ class Board
         @board[i][j].set(piece)
     end
 
+    def game_over?
+        x_win? || o_win? || cats_game?
+    end
+    
     def x_win?
         check_win(X.new)
     end
