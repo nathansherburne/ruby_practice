@@ -17,7 +17,7 @@ while true
 
     while true
         system "cls" or system 'clear'
-        puts board.to_string
+        puts board.to_s
         if o_turn
             piece_str = 'O'
             puts "Player 1's turn (#{piece_str})"
@@ -42,7 +42,7 @@ while true
                 elsif board.cats_game?
                     puts "Cats game!!"
                 end
-                puts board.to_string
+                puts board.to_s
                 break
             end
             o_turn = !o_turn

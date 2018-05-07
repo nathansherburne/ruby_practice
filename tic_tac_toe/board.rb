@@ -34,7 +34,7 @@ class Board
         @board.all? { |row| row.all? { |tile| tile.set? } }
     end
 
-    def to_string
+    def to_s
         fill_n = 1
         win = find_win
         h_sep = '-'
@@ -48,7 +48,7 @@ class Board
         c3 = win == 'c3' ? v_sep : fill
         d1 = win == 'd1' ? '\\' : fill
         d2 = win == 'd2' ? '/' : fill
-        str_arr = @board.map { |row| row.map { |tile| tile.to_string } }
+        str_arr = @board.map { |row| row.map { |tile| tile.to_s } }
         "
         #{d1}#{fill*(fill_n-1)}#{c1}#{fill*fill_n}#{v_sep}#{fill*fill_n}#{c2}#{fill*fill_n}#{v_sep}#{fill*fill_n}#{c3}#{fill*(fill_n-1)}#{d2} 
         #{r1*fill_n}#{str_arr[0][0]}#{r1*fill_n}#{v_sep}#{r1*fill_n}#{str_arr[0][1]}#{r1*fill_n}#{v_sep}#{r1*fill_n}#{str_arr[0][2]}#{r1*fill_n}   

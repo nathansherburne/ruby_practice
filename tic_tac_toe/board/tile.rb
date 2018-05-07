@@ -14,9 +14,9 @@ class Board
             @piece.check(X.new) || @piece.check(O.new)
         end
 
-        def to_string
+        def to_s
             if set?
-                @piece.to_string
+                @piece.to_s
             else
                 @position
             end
