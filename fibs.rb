@@ -1,3 +1,4 @@
+require 'bigdecimal'
 require 'benchmark'
 
 def fibs(n, a = 0, b = 1)
@@ -12,19 +13,34 @@ def fibs(n, a = 0, b = 1)
 end
 
 def fibs_rec(n, a = 0, b = 1)
-  n > 1 ? [a] + [fibs_rec(n-1, b, a+b)] : [a]
+  n > 1 ? [a] + fibs_rec(n-1, b, a+b) : [a]
 end
 
-time_itr = Benchmark.measure do
-  (1..2000).each { |n| fibs(n) }
+def fibs_fun(n)
+  (1..n).to_a.map { |i| fib_fun(i) }
 end
 
-time_rec = Benchmark.measure do
-  (1..2000).each { |n| fibs_rec(n) }
+def fib(n)
+  fibs(n)[-1]
 end
 
-puts "Iteration time:"
-puts time_itr
+def fib_rec(n)
+  fibs_rec(n)[-1]
+end
 
-puts "Recursion time:"
-puts time_rec
+def time_trial
+  n = 2500
+  time_itr = Benchmark.measure do
+    (1..n).each { |i| fibs(i) }
+  end
+
+  time_rec = Benchmark.measure do
+    (1..n).each { |i| fibs_rec(i) }
+  end
+
+  puts "Iteration time:"
+  puts time_itr
+
+  puts "Recursion time:"
+  puts time_rec
+end
